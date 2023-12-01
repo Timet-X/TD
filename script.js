@@ -1,4 +1,4 @@
-let ws = new WebSocket("WSS://websocket-1.onrender.com/:443");
+let ws = new WebSocket("wss://websocket-1.onrender.com/:443");
 
 let controllTD = document.querySelector('.controllTD') ;
 controllTD.addEventListener('input', (event) => {
