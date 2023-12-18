@@ -5,6 +5,13 @@ controllTD.addEventListener('input', (event) => {
   ws.send(JSON.stringify({ 'text1': controllTD.value }));
 }, false);
 
+document.getElementById('sendText').addEventListener('click', () => {
+    let textInput = document.getElementById('textInput').value;
+    ws.send(JSON.stringify({ 'text': textInput }));
+
+
+
+
 ws.addEventListener('open', (event) => {
   console.log('Socket connection open!');
   // alert('Successfully connected to socket server 🎉');
