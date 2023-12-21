@@ -2,7 +2,7 @@ let ws = new WebSocket("wss://websocket-1.onrender.com/:443");
 
 let controllTD = document.querySelector('.controllTD') ;
 controllTD.addEventListener('input', (event) => {
-  ws.send(JSON.stringify({ 'text1': controllTD.value }));
+  ws.send(JSON.stringify({ 'text1': controllTD.value/100000000000000 }));
 }, false);
 
 document.getElementById('sendText').addEventListener('click', () => {
